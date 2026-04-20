@@ -1,0 +1,38 @@
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+.logo_heading {
+  font-size: 30px;
+  color: firebrick;
+  font-weight: bold;
+}
+
+.header_navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_navbar a {
+  padding: 10px 14px;
+  font-size: 20px;
+  color: lightsalmon;
+  text-decoration: none;
+}
+.header_navbar a:hover {
+  background-color: lightsalmon;
+  color: white;
+}
