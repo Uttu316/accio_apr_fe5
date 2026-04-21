@@ -1,0 +1,42 @@
+export const USERS = [
+  {
+    id: "3236273",
+    name: "Kirti Rai",
+    city: "Mumbai",
+    gender: "f",
+    phone: "9898989898",
+    image: "https://randomuser.me/api/portraits/women/1.jpg",
+  },
+  {
+    id: "32323243",
+    name: "Akash Yadav",
+    city: "Lucknow",
+    gender: "m",
+    phone: "878787878",
+    image: "https://randomuser.me/api/portraits/men/2.jpg",
+  },
+  {
+    id: "556567567576",
+    name: "Ajay kumar",
+    city: "Chennai",
+    gender: "m",
+    phone: "78789898967",
+    image: "https://randomuser.me/api/portraits/men/3.jpg",
+  },
+  {
+    id: "323267689",
+    name: "Mohammed Junaid",
+    city: "Jamshedpur",
+    gender: "m",
+    phone: "6765670000",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+  },
+  {
+    id: "868783232",
+    name: "Sujata Das",
+    city: "Bhubneshwar",
+    gender: "f",
+    phone: "6787878787",
+    image: "https://randomuser.me/api/portraits/women/2.jpg",
+  },
+];

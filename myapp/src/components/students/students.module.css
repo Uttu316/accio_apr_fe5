@@ -1,0 +1,54 @@
+.container {
+  margin: 40px;
+  padding: 10px;
+}
+
+.heading {
+  color: orangered;
+  text-align: center;
+  font-size: 24px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 750px;
+}
+
+.card {
+  box-shadow: 4px 4px 4px #ccc;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.img {
+  height: 180px;
+  width: 100%;
+  border-radius: 12px;
+}
+.name {
+  color: crimson;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.city {
+  margin-top: 8px;
+}
+.gender {
+  color: gray;
+  margin-top: 4px;
+}
+
+.phone {
+  color: lightseagreen;
+  align-items: center;
+  display: flex;
+  gap: 2px;
+  margin-top: 6px;
+}

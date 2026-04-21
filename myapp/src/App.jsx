@@ -1,6 +1,8 @@
 import "./App.css";
+import Counter from "./components/counter";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import Students from "./components/students";
 
 function App() {
   let fnName = "Utkarsh";
@@ -10,14 +12,9 @@ function App() {
   };
   return (
     <div>
-      <Header />
-      <h1 className="main_heading">Hello Welcome to React Session</h1>
-      <h2 className="sub_heading">By- {fnName + " " + lname}</h2>
-      {2 + 2}
-      <b>{getUserName()}</b>
-
-      <ul>{[<li>A</li>, <li>B</li>, <li>C</li>, <li>D</li>]}</ul>
-      <h3 className="presentedBy">Presented By- Accio Job</h3>
+      <Header title={"My App"} />
+      <Students />
+      <Counter />
       <Footer />
     </div>
   );
