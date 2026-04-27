@@ -1,0 +1,17 @@
+.main_heading {
+  color: darkorange;
+  margin: 40px;
+  text-align: center;
+}
+.sub_heading {
+  color: lightskyblue;
+  margin: 20px;
+  text-align: center;
+}
+
+.presentedBy {
+  color: brown;
+  margin: 10px;
+  text-align: center;
+  text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.statusMsg {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.errorMsg {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
