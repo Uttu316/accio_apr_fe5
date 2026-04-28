@@ -1,11 +1,17 @@
+import { useNavigate } from "react-router";
 import styles from "./productsLists.module.css";
 
 const ProductItem = ({ product }) => {
-  const { image, title, category, rating, price, description } = product;
+  const { image, title, category, rating, price, id, description } = product;
   const { rate, count } = rating || {};
 
+  const navigate = useNavigate();
+
+  const onProduct = () => {
+    navigate(`/product/${id}`);
+  };
   return (
-    <div className={styles.card}>
+    <div onClick={onProduct} className={styles.card}>
       <div className={styles.imageWrap}>
         <img className={styles.image} src={image} alt={title} />
       </div>

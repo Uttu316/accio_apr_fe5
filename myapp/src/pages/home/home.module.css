@@ -1,0 +1,388 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+  color: #fff;
+  padding: 4rem 1.5rem;
+}
+
+.heroContent {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.heroInner {
+  flex: 1;
+}
+
+.heroImg {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  .heroImg {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+.heroTag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.heroSub {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0 0 2rem;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #4f46e5;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btnOutline {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnOutline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Features ── */
+.features {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.sectionSub {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0 0 2rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+}
+
+.featureIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1rem;
+}
+
+.iconPurple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.iconBlue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.iconGreen {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.iconOrange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.featureTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.featureDesc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Categories ── */
+.categories {
+  background: #fff;
+  padding: 3rem 1.5rem;
+}
+
+.catGrid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.catCard {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  height: 200px;
+}
+
+.catCard:hover .catImg {
+  transform: scale(1.08);
+}
+
+.catImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.catOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.25rem;
+}
+
+.catIconInline {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.catName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+/* ── Promo Banner ── */
+.promo {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.promoCard {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promoImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promoOverlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 2rem;
+  background: rgba(15, 23, 42, 0.55);
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promoTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+}
+
+.promoText {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0 0 1.5rem;
+}
+
+.promoBtn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.promoBtn:hover {
+  opacity: 0.9;
+}
+
+/* ── Testimonials ── */
+.testimonials {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.testGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.testCard {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.testQuote {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.testAuthor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.testAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #4f46e5;
+}
+
+.testName {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.testRole {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0;
+}

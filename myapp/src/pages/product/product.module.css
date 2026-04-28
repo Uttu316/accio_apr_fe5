@@ -1,0 +1,398 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+}
+
+/* ── Status States ── */
+.statusWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  flex-direction: column;
+}
+
+.statusMsg {
+  font-size: 1.1rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.errorMsg {
+  color: #dc2626;
+  font-weight: 600;
+  margin: 40px;
+}
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 1.25rem auto 0;
+  padding: 0 1.5rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.breadcrumb a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ── Main Layout ── */
+.main {
+  max-width: 1200px;
+  margin: 1.5rem auto 3rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ── Image Column ── */
+.imageCol {
+  position: sticky;
+  top: 2rem;
+}
+
+.imageCard {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+}
+
+.productImg {
+  max-width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.productImg:hover {
+  transform: scale(1.05);
+}
+
+/* ── Details Column ── */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.category {
+  display: inline-block;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ── Rating ── */
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.stars {
+  display: flex;
+  gap: 0.15rem;
+  color: #f59e0b;
+  font-size: 1.1rem;
+}
+
+.starEmpty {
+  color: #e2e8f0;
+}
+
+.rateText {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.countText {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* ── Price ── */
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.priceNote {
+  font-size: 0.82rem;
+  color: #16a34a;
+  font-weight: 600;
+  margin: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 0;
+}
+
+/* ── Description ── */
+.descTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.descText {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Buttons ── */
+.btnGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnCart {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #6366f1;
+  border-radius: 0.6rem;
+  background: #fff;
+  color: #6366f1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    transform 0.15s;
+}
+
+.btnCart:hover {
+  background: #eef2ff;
+}
+
+.btnCart:active {
+  transform: scale(0.97);
+}
+
+.btnBuy {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+}
+
+.btnBuy:hover {
+  opacity: 0.92;
+}
+
+.btnBuy:active {
+  transform: scale(0.97);
+}
+
+/* ── Trust Badges ── */
+.trustRow {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.trustIcon {
+  font-size: 1rem;
+  color: #16a34a;
+}
+
+/* ── Bottom Sections ── */
+.bottomSection {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.bottomTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1.25rem;
+}
+
+/* ── Highlights ── */
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.highlightCard {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.highlightIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.hlPurple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.hlBlue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.hlGreen {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.hlOrange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.highlightTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.2rem;
+}
+
+.highlightDesc {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ── Reviews Preview ── */
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.reviewCard {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.reviewStars {
+  display: flex;
+  gap: 0.1rem;
+  color: #f59e0b;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.reviewText {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.55;
+  font-style: italic;
+  margin: 0 0 0.75rem;
+}
+
+.reviewAuthor {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}

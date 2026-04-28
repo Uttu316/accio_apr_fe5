@@ -37,3 +37,7 @@
   background-color: lightsalmon;
   color: white;
 }
+.header_navbar a.active {
+  background-color: lightsalmon;
+  color: white;
+}
