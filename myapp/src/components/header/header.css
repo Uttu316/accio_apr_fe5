@@ -32,6 +32,7 @@
   font-size: 20px;
   color: lightsalmon;
   text-decoration: none;
+  position: relative;
 }
 .header_navbar a:hover {
   background-color: lightsalmon;
@@ -40,4 +41,19 @@
 .header_navbar a.active {
   background-color: lightsalmon;
   color: white;
+}
+
+.header_nav_badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: teal;
+  color: white;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: -4px;
 }

@@ -1,14 +1,11 @@
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import { FiHeart, FiGlobe, FiAward, FiUsers } from "react-icons/fi";
 import { FaUserTie } from "react-icons/fa";
 import styles from "./about.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const AboutPage = () => {
   return (
-    <div className={styles.page}>
-      <Header title="About Us" />
-
+    <PageWrapper title="About" className={styles.page}>
       {/* Banner */}
       <section className={styles.banner}>
         <img
@@ -149,9 +146,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 export default AboutPage;

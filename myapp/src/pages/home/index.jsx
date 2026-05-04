@@ -1,5 +1,3 @@
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import { FiTruck, FiShield, FiCreditCard, FiHeadphones } from "react-icons/fi";
 import {
   FaTshirt,
@@ -12,12 +10,11 @@ import {
 import { FaUserCircle } from "react-icons/fa";
 import styles from "./home.module.css";
 import { Link } from "react-router";
+import PageWrapper from "../../components/pageWrapper";
 
 const HomePage = () => {
   return (
-    <div className={styles.page}>
-      <Header title="ShopVibe" />
-
+    <PageWrapper title="ShopVibe" className={styles.page}>
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -239,9 +236,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 export default HomePage;

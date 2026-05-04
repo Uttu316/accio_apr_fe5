@@ -1,12 +1,10 @@
 import { FiHome, FiAlertTriangle } from "react-icons/fi";
 import styles from "./notfound.module.css";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
+import PageWrapper from "../../components/pageWrapper";
 
 const NotFoundPage = () => {
   return (
-    <div className={styles.page}>
-      <Header title="Wrong Page" />
+    <PageWrapper className={styles.page} title="Wrong Page">
       <div className={styles.wrapper}>
         <img
           className={styles.lostImg}
@@ -28,8 +26,7 @@ const NotFoundPage = () => {
           <FiHome /> Back to Home
         </a>
       </div>
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 export default NotFoundPage;

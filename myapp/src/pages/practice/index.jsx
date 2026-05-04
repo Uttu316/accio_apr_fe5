@@ -1,10 +1,9 @@
 import "./practice.css";
 import Banner from "../../components/Banner";
 import Counter from "../../components/counter";
-import Footer from "../../components/footer";
-import Header from "../../components/header";
 import Students from "../../components/students";
 import TodoList from "../../components/todolist";
+import PageWrapper from "../../components/pageWrapper";
 
 function PracticePage() {
   let fnName = "Utkarsh";
@@ -13,14 +12,12 @@ function PracticePage() {
     return "aman";
   };
   return (
-    <div>
-      <Header title={"My App"} />
+    <PageWrapper title={"My App"}>
       <Students />
       <Counter />
       <TodoList />
       <Banner />
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 }
 

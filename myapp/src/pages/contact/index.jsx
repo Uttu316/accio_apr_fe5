@@ -1,13 +1,10 @@
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
 import styles from "./contact.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const ContactPage = () => {
   return (
-    <div className={styles.page}>
-      <Header title="Contact Us" />
-
+    <PageWrapper title="Contact Us" className={styles.page}>
       {/* Banner */}
       <section className={styles.banner}>
         <img
@@ -182,9 +179,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 export default ContactPage;

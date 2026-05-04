@@ -1,8 +1,6 @@
 import { Link, useParams } from "react-router";
-import Footer from "../../components/footer";
-import Header from "../../components/header";
 import { API } from "../../services";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   FiShoppingCart,
   FiZap,
@@ -15,6 +13,8 @@ import {
   FiClock,
 } from "react-icons/fi";
 import styles from "./product.module.css";
+import PageWrapper from "../../components/pageWrapper";
+import { CartContext } from "../../contexts/CartContext";
 
 const StarRating = ({ rate }) => {
   const full = Math.floor(rate);
@@ -36,6 +36,8 @@ const ProductPage = () => {
   const [product, setProduct] = useState(null);
   const [status, setStatus] = useState("loading");
 
+  const { isInCart, addToCart, removeFromCart } = useContext(CartContext);
+
   const getProduct = async () => {
     try {
       const data = await API({ endpoint: "/products/" + id });
@@ -56,10 +58,16 @@ const ProductPage = () => {
   const hasProduct = isDone && product !== null;
   const noProduct = isDone && product === null;
 
-  return (
-    <div className={styles.page}>
-      <Header title="Product" />
+  const inCart = isInCart(id);
 
+  const onAddCart = () => {
+    addToCart(product);
+  };
+  const onRemoveFromCart = () => {
+    removeFromCart(id);
+  };
+  return (
+    <PageWrapper title="Product" className={styles.page}>
       {isLoading && (
         <div className={styles.statusWrap}>
           <p className={styles.statusMsg}>Loading product details...</p>
@@ -138,9 +146,16 @@ const ProductPage = () => {
 
               {/* Buttons */}
               <div className={styles.btnGroup}>
-                <button className={styles.btnCart}>
-                  <FiShoppingCart /> Add to Cart
-                </button>
+                {!inCart && (
+                  <button onClick={onAddCart} className={styles.btnCart}>
+                    <FiShoppingCart /> Add to Cart
+                  </button>
+                )}
+                {inCart && (
+                  <button onClick={onRemoveFromCart} className={styles.btnCart}>
+                    <FiShoppingCart /> Remove from Cart
+                  </button>
+                )}
                 <button className={styles.btnBuy}>
                   <FiZap /> Buy Now
                 </button>
@@ -257,9 +272,7 @@ const ProductPage = () => {
           </section>
         </>
       )}
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 export default ProductPage;
